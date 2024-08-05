@@ -2,7 +2,7 @@
 
 ---
 
-<!--あとで<img src="40085_binary_hacks_rebooted_cvr.jpg" width="50%">-->
+<img src="40085_binary_hacks_rebooted_cvr.jpg" width="50%">
 
 ---
 
