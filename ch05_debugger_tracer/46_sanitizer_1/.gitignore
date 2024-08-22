@@ -1,0 +1,3 @@
+use-after-free
+use-after-free-asan
+integer-overflow-ubsan.bin

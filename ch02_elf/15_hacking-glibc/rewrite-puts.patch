@@ -1,0 +1,13 @@
+diff --git a/libio/ioputs.c b/libio/ioputs.c
+index ff0ff31729..7ef1ee7272 100644
+--- a/libio/ioputs.c
++++ b/libio/ioputs.c
+@@ -37,7 +37,7 @@ _IO_puts (const char *str)
+ 
+   if ((_IO_vtable_offset (stdout) != 0
+        || _IO_fwide (stdout, -1) == -1)
+-      && _IO_sputn (stdout, str, len) == len
++      && _IO_sputn (stdout, "Your puts is patched!\n", 22) == len
+       && _IO_putc_unlocked ('\n', stdout) != EOF)
+     result = MIN (INT_MAX, len + 1);
+ 

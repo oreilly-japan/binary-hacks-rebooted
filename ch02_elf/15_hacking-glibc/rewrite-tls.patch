@@ -1,0 +1,18 @@
+diff --git a/elf/dl-tls.c b/elf/dl-tls.c
+index 093cdddb7e..f7962111aa 100644
+--- a/elf/dl-tls.c
++++ b/elf/dl-tls.c
+@@ -608,6 +608,13 @@ _dl_allocate_tls_init (void *result, bool init_tls)
+ 	  memset (__mempcpy (dest, map->l_tls_initimage,
+ 			     map->l_tls_initimage_size), '\0',
+ 		  map->l_tls_blocksize - map->l_tls_initimage_size);
++      if(*((unsigned long*)map->l_tls_initimage) == 0xaabbccddaabbccdd){
++          _dl_printf("Replace the first 8bytes of "
++                     "map->l_tls_initimage with "
++                     "0x1122334455667788\n");
++          *((unsigned long*)dest) = 0x1122334455667788;
++      }
++
+ 	}
+ 
+       total += cnt;
