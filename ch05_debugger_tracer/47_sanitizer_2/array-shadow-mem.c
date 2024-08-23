@@ -8,6 +8,6 @@ int main(void) {
     report_and_exit();
   }
   array[index] = 42;
-  printf("%lu\n", array[index]);
+  printf("%llu\n", array[index]);
   return 0;
 }
