@@ -23,7 +23,7 @@ void *malloc(size_t size) {
 
   // ちなみに、（実装依存だが）ここの出力先をstdoutにすると
   // 内部でバッファリングのためにmallocが呼ばれて無限再帰になってしまう
-  fprintf(stderr, "malloc: size=%lu\n", size);
+  fprintf(stderr, "malloc: size=%zu\n", size);
 
   // オリジナルのmallocを呼び出す
   return real_malloc(size);
