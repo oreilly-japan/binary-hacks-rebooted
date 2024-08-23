@@ -4,6 +4,6 @@ uint64_t array[10];
 int main(void) {
   int index = 12;
   array[index] = 42;
-  printf("%lu\n", array[index]);
+  printf("%llu\n", array[index]);
   return 0;
 }
