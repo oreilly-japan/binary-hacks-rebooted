@@ -6,6 +6,6 @@ int main(void) {
   // 128バイトを確保していたので、それを超えるindexを指定してみる
   int index = 20;
   array[index] = 42;
-  printf("%lu\n", array[index]);
+  printf("%llu\n", array[index]);
   return 0;
 }
