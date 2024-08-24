@@ -1,0 +1,12 @@
+[package]
+name = "naive_fuzzer"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+
+[dependencies]
+libafl = { path = "../../libafl/", features = ["std", "derive"] }
+libafl_bolts = { path = "../../libafl_bolts/" }

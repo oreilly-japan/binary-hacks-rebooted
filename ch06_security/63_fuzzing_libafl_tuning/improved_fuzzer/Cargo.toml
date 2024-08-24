@@ -1,0 +1,13 @@
+[package]
+name = "improved_fuzzer"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+
+[dependencies]
+serde = { version = "1.0", default-features = false, features = ["alloc", "derive"] }
+libafl = { path = "../../libafl/", features = ["std", "derive"] }
+libafl_bolts = { path = "../../libafl_bolts/" }

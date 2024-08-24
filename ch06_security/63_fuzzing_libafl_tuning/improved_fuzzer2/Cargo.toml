@@ -1,0 +1,13 @@
+[package]
+name = "improved_fuzzer2"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+
+[dependencies]
+libafl = { path = "../../libafl/", features = ["std", "derive"] }
+libafl_bolts = { path = "../../libafl_bolts/" }
+nix = { version = "0.26" }

@@ -1,0 +1,5 @@
+dlopen
+ffi-asm-thunk
+ffi-libc
+many-args
+mylib.so
