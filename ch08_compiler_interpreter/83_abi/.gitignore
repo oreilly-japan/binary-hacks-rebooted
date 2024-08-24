@@ -1,0 +1,8 @@
+mismatch
+mismatch-main.o
+mismatch-sub.o
+test.s
+vararg.s
+mismatch-vararg
+m256
+custom-vararg

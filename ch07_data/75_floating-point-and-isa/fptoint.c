@@ -1,4 +1,3 @@
-// fptoint.c
 #include <fenv.h>
 #include <inttypes.h>
 #include <math.h>

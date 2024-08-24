@@ -1,0 +1,7 @@
+bind_x86_64_sysv
+bind_x86_64_win.exe
+bind_aarch64_unix
+bind_x86_64_sysv_nowx
+bind_aarch64_unix_nowx
+bind_aarch64_apple_map_jit
+macos_map_jit_benchmark

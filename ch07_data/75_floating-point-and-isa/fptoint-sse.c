@@ -1,4 +1,3 @@
-// fptoint-sse.c
 #include <fenv.h>
 #include <immintrin.h>
 #include <inttypes.h>
@@ -9,10 +8,10 @@
 
 void test_cvtss2si(float x) {
   feclearexcept(FE_INVALID | FE_INEXACT);
-  int32_t i = _mm_cvtss_i32(_mm_set_ss(x));
+  int32_t i = _mm_cvtss_si32(_mm_set_ss(x));
   int invalid = fetestexcept(FE_INVALID) != 0;
   int inexact = fetestexcept(FE_INEXACT) != 0;
-  printf("_mm_cvtss_i32(%g) = %" PRId32 " (0x%08" PRIx32
+  printf("_mm_cvtss_si32(%g) = %" PRId32 " (0x%08" PRIx32
          "), %s FE_INVALID, %s FE_INEXACT\n",
          x, i, (uint32_t)i, invalid ? "with" : "without",
          inexact ? "with" : "without");
@@ -20,10 +19,10 @@ void test_cvtss2si(float x) {
 
 void test_cvtsd2si(double x) {
   feclearexcept(FE_INVALID | FE_INEXACT);
-  int32_t i = _mm_cvtsd_i32(_mm_set_sd(x));
+  int32_t i = _mm_cvtsd_si32(_mm_set_sd(x));
   int invalid = fetestexcept(FE_INVALID) != 0;
   int inexact = fetestexcept(FE_INEXACT) != 0;
-  printf("_mm_cvtsd_i32(%g) = %" PRId32 " (0x%08" PRIx32
+  printf("_mm_cvtsd_si32(%g) = %" PRId32 " (0x%08" PRIx32
          "), %s FE_INVALID, %s FE_INEXACT\n",
          x, i, (uint32_t)i, invalid ? "with" : "without",
          inexact ? "with" : "without");
