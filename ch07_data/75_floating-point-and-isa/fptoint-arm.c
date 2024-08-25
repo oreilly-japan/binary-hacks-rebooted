@@ -1,4 +1,3 @@
-// fptoint.c
 #include <arm_acle.h>
 #include <fenv.h>
 #include <inttypes.h>

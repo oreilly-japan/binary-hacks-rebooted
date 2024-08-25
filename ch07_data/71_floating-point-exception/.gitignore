@@ -1,0 +1,7 @@
+exception
+trap-sse2
+trap-aarch64
+trap-glibc
+avx512-sae
+flushtozero
+flushtozero-neon

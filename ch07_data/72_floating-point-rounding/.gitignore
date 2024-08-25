@@ -1,0 +1,6 @@
+setround1
+setround2
+rounding-avx512
+rounding-riscv
+rounding-cuda
+rounding-c23
