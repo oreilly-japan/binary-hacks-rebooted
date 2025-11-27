@@ -1,0 +1,6 @@
+// readしたバイト数の合計を表示
+tracepoint:syscalls:sys_exit_read
+/ args->ret > 0 /
+{
+    @mp[comm] = sum(args->ret);
+}
